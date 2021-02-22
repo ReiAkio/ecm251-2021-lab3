@@ -2,9 +2,10 @@
 guada trabalhos e projetos da disciplina
 
 # Desenvolvedor(a):
-## Thiago Akio Kanada Tanaka
+- Thiago Akio Kanada Tanaka
 
 # Linguagens e Frameworks: 
 - Java
 - Python
 - C
+- Dart
