@@ -32,7 +32,7 @@ public class Main {
         if(c1.sacar(1000)){
             System.out.println("Deu bom");
         } else{
-            System.out.printf("deu ruim");
+            System.out.println("deu ruim");
         }
         c1.visualizarSaldo();
 
