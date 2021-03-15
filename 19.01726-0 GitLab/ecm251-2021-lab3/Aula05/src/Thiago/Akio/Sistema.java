@@ -28,6 +28,44 @@ public class Sistema {
                 System.out.println("Obrigado por ter utilizado nosso sitema!");
                 this.continuarExecucao = false;
                 break;
+
+            case 1:
+                System.out.println("Saldo: R$" + this.conta.getSaldo());
+                break;
+
+            case 2:
+                System.out.println("Informe o valor:");
+                double valorParaDepositar = scanner.nextDouble();
+                this.conta.depositar(valorParaDepositar);
+                System.out.println("Operação realizada com sucesso!");
+                break;
+
+            case 3:
+                System.out.println("Informe valor:");
+                double valorParaRetirar = scanner.nextDouble();
+                if(this.conta.sacar(valorParaRetirar)) {
+                    System.out.println("Operação realizada com sucesso!");
+                } else{
+                        System.out.println("Operação falhou!");
+                    }
+
+            case 5:
+                System.out.println("Nome do título:");
+                String nomeTitulo = scanner.next();
+                System.out.println("Informe o valor do título");
+                double valorTitulo = scanner.nextDouble();
+                System.out.println("Informe o valor do juros ao dia:");
+                double valorJurosTitulo = scanner.nextDouble();
+                System.out.println("Informe a data de vencimento (aaaa-mm-dd):");
+                String dataValidade = scanner.next();
+                Titulo titulo = new Titulo(valorTitulo, valorJurosTitulo,nomeTitulo, dataValidade);
+                if(this.conta.sacar(titulo.getTotalPagamento())){
+                    System.out.println("Operação realizada com sucesso");
+                } else{
+                    System.out.println("Falha na operação!");
+                }
+                break;
+
             default:
                 System.out.println("Funcionalidade ainda não implementada");
                 break;
