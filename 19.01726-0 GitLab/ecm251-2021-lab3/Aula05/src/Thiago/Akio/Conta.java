@@ -3,10 +3,16 @@ package Thiago.Akio;
 public class Conta {
     int numero;
     double saldo;
-    Cliente cliente;
+    private Cliente cliente;
 
-    void visualizarSaldo(){
-        System.out.println("Saldo da conta: R$" + this.saldo);
+    public Conta(int numero, double saldo, String cliente) {
+        this.numero = numero;
+        this.saldo = saldo;
+        this.cliente = new Cliente(cliente);
+    }
+
+    public double getSaldo(){
+        return this.saldo;
     }
 
     void depositar(double valor){
