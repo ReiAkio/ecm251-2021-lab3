@@ -21,5 +21,5 @@ public class Contas {
 
     public int getIdConta() {
         return idConta;
-    }
+    } //pegaID
 }
