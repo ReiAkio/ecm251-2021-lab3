@@ -8,14 +8,14 @@ public class Main {
 
     private Usuarios usuario;
     public static void main(String[] args) {
-            Sistema sistema = new Sistema();
-            sistema.executar();
+        Sistema sistema = new Sistema();
+        sistema.executar();
 
-            sistema.menu();
-            if (usuario.nome == true && usuario.senha == true){
-                sistema.executar()
-            }
-
+        sistema.menu();
+        if (usuario.nome == true && usuario.senha == true){
+            sistema.executar()
+        }
+//asas
 
     }
 }
