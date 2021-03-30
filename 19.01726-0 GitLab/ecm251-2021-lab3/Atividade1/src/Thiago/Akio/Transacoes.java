@@ -25,7 +25,7 @@ public class Transacoes {
 
         this.conta.saldo += valor;
 
-}
+    }
 
     public boolean transferirDinheiro (Contas conta, double valor){
 
@@ -39,7 +39,7 @@ public class Transacoes {
     }
 
 
-    }
-
+}
+S
 
 
