@@ -1,22 +1,22 @@
 package Thiago.Akio;
 
 
-public class Usuarios {
+import java.util.ArrayList;
 
+public class Usuarios {
+    public static ArrayList<Usuarios> usuariosListados = new ArrayList<>();
     public String nome;
     private String senha;
     private String email;
+    private Contas conta;
 
-    public Usuarios(String nome) {
+    public Usuarios(String nome, String senha, String email,double saldo, int idConta) {
         this.nome = nome;
-    }
+        this.senha = senha;
+        this.email = email;
+        this.conta = new Contas(idConta, saldo,this);
 
-    public String getSenha() {
-        return senha;
-    }
-
-    public String getEmail() {
-        return email;
+        Usuarios.usuariosListados.add(this);
     }
 
     @Override
@@ -25,6 +25,7 @@ public class Usuarios {
                 "nome='" + nome + '\'' +
                 ", senha='" + senha + '\'' +
                 ", email='" + email + '\'' +
+                ", conta='" + conta + '\'' +
                 '}';
     }
 }

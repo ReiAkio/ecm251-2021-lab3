@@ -6,16 +6,10 @@ package Thiago.Akio;
 
 public class Main {
 
-    private Usuarios usuario;
+    //private Usuarios usuario;
     public static void main(String[] args) {
-        Sistema sistema = new Sistema();
-        sistema.executar();
 
-        sistema.menu();
-        if (usuario.nome == true && usuario.senha == true){
-            sistema.executar()
-        }
-//asas
-
+        Sistema.start();
+        System.out.println(Usuarios.usuariosListados);
     }
 }
