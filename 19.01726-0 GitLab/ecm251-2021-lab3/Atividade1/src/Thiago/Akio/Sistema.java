@@ -16,24 +16,28 @@ public class Sistema {
         new Usuarios("Maria", "Maria123", "Maria@",500,333);
         logarUsuario();
     }
-    public void logarUsuario(){
+    public void logarUsuario() {
         System.out.println("Qual o seu nome?");
         String nome = scanner.nextLine();
         System.out.println("Qual a sua senha?");
         String senha = scanner.nextLine();
-        for (Usuarios usuario : Usuarios.usuariosListados) {
+        boolean existeUser = false;
+            for (Usuarios usuario : Usuarios.usuariosListados) {
 
-            if (nome.equals(usuario.nome)) {
+                if (nome.equals(usuario.nome)) {
 
-                if (senha.equals(usuario.senha)) {
-                    this.conta = usuario.conta;
-                    System.out.println("Vc foi logado");
-                    executar();
+                    if (senha.equals(usuario.senha)) {
+                        this.conta = usuario.conta;
+                        System.out.println("Vc foi logado");
+                        executar();
+                    }
+
                 }
-
             }
+        System.out.println("Usuario não encontrado!");
         }
-    }
+
+
 
     public void executar(){
         this.continuarExecucao = true;
@@ -97,6 +101,7 @@ public class Sistema {
                 System.out.println("Cole o QRcode gerado:");
                 String QRcodeString = scanner.nextLine();
                 Transacoes.transferirDinheiro(destino, this.conta, QRcodeString);
+                System.out.println("Valor transferido");
                 break;
 
 

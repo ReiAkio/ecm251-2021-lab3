@@ -4,7 +4,7 @@ package Thiago.Akio;
 import java.util.ArrayList;
 
 public class Usuarios {
-    public static ArrayList<Usuarios> usuariosListados = new ArrayList<>();
+    public static ArrayList<Usuarios> usuariosListados = new ArrayList<>(); // Ajuda do aluno Bruno Vilard
     public String nome;
     public String senha;
     public String email;
