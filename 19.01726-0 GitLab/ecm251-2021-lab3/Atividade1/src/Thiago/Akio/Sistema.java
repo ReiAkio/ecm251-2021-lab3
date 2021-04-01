@@ -14,6 +14,8 @@ public class Sistema {
         new Usuarios("Joao", "Joao123", "Joao@",200,111);
         new Usuarios("Guilherme", "Guilherme123", "Guilherme@", 300,222);
         new Usuarios("Maria", "Maria123", "Maria@",500,333);
+
+        logarUsuario();
     }
     public static void logarUsuario(){
         System.out.println("Qual o seu nome?");
