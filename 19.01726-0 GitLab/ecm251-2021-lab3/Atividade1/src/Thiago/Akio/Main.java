@@ -10,6 +10,6 @@ public class Main {
     public static void main(String[] args) {
 
         Sistema.start();
-        System.out.println(Usuarios.usuariosListados);
+        Sistema.logarUsuario("Maria","Maria123");
     }
 }

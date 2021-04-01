@@ -6,9 +6,9 @@ import java.util.ArrayList;
 public class Usuarios {
     public static ArrayList<Usuarios> usuariosListados = new ArrayList<>();
     public String nome;
-    private String senha;
-    private String email;
-    private Contas conta;
+    public String senha;
+    public String email;
+    public Contas conta;
 
     public Usuarios(String nome, String senha, String email,double saldo, int idConta) {
         this.nome = nome;

@@ -9,13 +9,31 @@ public class Sistema {
 
 
     public static void start(){
-        new Usuarios("Vila", "casada", "vila@kkk",1000000,111);
-        new Usuarios("Guta", "GutaMax", "Maxi@", 500,222);
-        new Usuarios("Harry", "Henrique", "H@haha",0,333);
+        new Usuarios("Joao", "Joao", "Joao@",200,111);
+        new Usuarios("Guilherme", "Guilherme123", "Guilherme@", 300,222);
+        new Usuarios("Maria", "Maria123", "Maria@",500,333);
     }
     public static void logarUsuario(String nome, String senha){
-        for (Usuarios usuario : Usuarios.usuariosListados) {
-            Usuarios.usuariosListados[0] == nome;
+
+            for (Usuarios usuario : Usuarios.usuariosListados) {
+
+                /*if (nome == Usuarios.usuariosListados){
+
+                    for (Usuarios usuario : Usuarios.usuariosListados){
+
+                        if (senha == Usuarios.usuariosListados){
+
+                            System.out.println("Vc foi logado");
+                        }
+                    }
+                }
+                else{
+                    System.out.println("Não foi possivel encontrar um nome em nosso banco de dados");
+                }*/
+
+
+            }
         }
+
     }
-    }
+
