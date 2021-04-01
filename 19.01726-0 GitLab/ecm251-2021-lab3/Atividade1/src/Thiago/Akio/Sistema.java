@@ -10,40 +10,36 @@ public class Sistema {
     private static Scanner scanner = new Scanner(System.in);
 
 
-    public static void start(){
+    public void start(){
         new Usuarios("Joao", "Joao123", "Joao@",200,111);
         new Usuarios("Guilherme", "Guilherme123", "Guilherme@", 300,222);
         new Usuarios("Maria", "Maria123", "Maria@",500,333);
-
         logarUsuario();
     }
-    public static void logarUsuario(){
+    public void logarUsuario(){
         System.out.println("Qual o seu nome?");
         String nome = scanner.nextLine();
         System.out.println("Qual a sua senha?");
         String senha = scanner.nextLine();
-            for (Usuarios usuario : Usuarios.usuariosListados) {
+        for (Usuarios usuario : Usuarios.usuariosListados) {
 
-                if (nome.equals(usuario.nome)) {
+            if (nome.equals(usuario.nome)) {
 
-                    if (senha.equals(usuario.senha)) {
-
-                        System.out.println("Vc foi logado");
-                        Sistema sistema = new Sistema();
-                        sistema.executar();
-                    }
-
+                if (senha.equals(usuario.senha)) {
+                    this.conta = usuario.conta;
+                    System.out.println("Vc foi logado");
+                    executar();
                 }
-
 
             }
         }
+    }
 
     public void executar(){
         this.continuarExecucao = true;
         while(continuarExecucao) {
             exibirMenu();
-            int opcao = scanner.nextInt();
+            int opcao = Integer.parseInt(scanner.nextLine());
             Menu(opcao);
         }
     }
@@ -57,27 +53,43 @@ public class Sistema {
 
             case 1:
                 System.out.println("saldo:"+ conta.getSaldo());
-                this.continuarExecucao = false;
+//                this.continuarExecucao = false;
                 break;
 
             case 2:
                 System.out.println("Digite o valor:");
-                double valordepositado = scanner.nextDouble();
+                double valordepositado = Double.parseDouble(scanner.nextLine());
                 conta.depositar(valordepositado);
-                this.continuarExecucao = false;
+//                this.continuarExecucao = false;
                 break;
 
             case 3:
                 System.out.println("Digite o valor:");
-                double valorsacado = scanner.nextDouble();
+                double valorsacado = Double.parseDouble(scanner.nextLine());
                 conta.sacar(valorsacado);
-                this.continuarExecucao = false;
+//                this.continuarExecucao = false;
                 break;
 
-            /*case 4:
+            case 4:
+                boolean isRegistered = false;
+                Contas destino = null;
+                while(!isRegistered){
+                    System.out.println("Digite o nome do destinatário:");
+                    String nome = scanner.nextLine();
+
+                    for (Usuarios usuario : Usuarios.usuariosListados) {
+                        if (nome.equals(usuario.nome)) {
+                            destino = usuario.conta;
+                            isRegistered = true;
+                            System.out.println("Usuário Encontrado!");
+                        }
+                    }
+                    System.out.println("Usuário não Encontrado!");
+                }
+
                 System.out.println("Digite o valor transferido:");
-                double valortransferido = scanner.nextDouble();
-                Transacoes.transferirDinheiro(Usuarios.usuariosListados[0], Usuarios.usuariosListados[1], valortransferido );*/
+                double valortransferido = Double.parseDouble(scanner.nextLine());
+                Transacoes.transferirDinheiro(destino, this.conta, valortransferido);
 
             default:
                 System.out.println("Funcionalidade ainda não implementada");
@@ -95,5 +107,4 @@ public class Sistema {
 
     }
 
-    }
-
+}

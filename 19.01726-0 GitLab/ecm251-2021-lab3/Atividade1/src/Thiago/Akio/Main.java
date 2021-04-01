@@ -8,9 +8,7 @@ public class Main {
 
     //private Usuarios usuario;
     public static void main(String[] args) {
-
-        Sistema.start();
-
-
+        Sistema sistema = new Sistema();
+        sistema.start();
     }
 }
