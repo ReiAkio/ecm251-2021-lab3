@@ -21,7 +21,6 @@ public class Sistema {
         String nome = scanner.nextLine();
         System.out.println("Qual a sua senha?");
         String senha = scanner.nextLine();
-        boolean existeUser = false;
             for (Usuarios usuario : Usuarios.usuariosListados) {
 
                 if (nome.equals(usuario.nome)) {
