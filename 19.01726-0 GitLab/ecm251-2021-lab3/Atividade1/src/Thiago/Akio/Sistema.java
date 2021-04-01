@@ -17,19 +17,18 @@ public class Sistema {
 
             for (Usuarios usuario : Usuarios.usuariosListados) {
 
-                /*if (nome == Usuarios.usuariosListados){
+                if (nome.equals(usuario.nome)){
+                    System.out.println("Encontrei !");
 
-                    for (Usuarios usuario : Usuarios.usuariosListados){
-
-                        if (senha == Usuarios.usuariosListados){
+                        if (senha.equals(usuario.senha)){
 
                             System.out.println("Vc foi logado");
                         }
-                    }
+
                 }
                 else{
                     System.out.println("Não foi possivel encontrar um nome em nosso banco de dados");
-                }*/
+                }
 
 
             }
