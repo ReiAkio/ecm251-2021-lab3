@@ -53,26 +53,24 @@ public class Sistema {
 
             case 1:
                 System.out.println("saldo:"+ conta.getSaldo());
-//                this.continuarExecucao = false;
                 break;
 
             case 2:
                 System.out.println("Digite o valor:");
                 double valordepositado = Double.parseDouble(scanner.nextLine());
                 conta.depositar(valordepositado);
-//                this.continuarExecucao = false;
                 break;
 
             case 3:
                 System.out.println("Digite o valor:");
                 double valorsacado = Double.parseDouble(scanner.nextLine());
                 conta.sacar(valorsacado);
-//                this.continuarExecucao = false;
                 break;
 
             case 4:
                 boolean isRegistered = false;
                 Contas destino = null;
+
                 while(!isRegistered){
                     System.out.println("Digite o nome do destinatário:");
                     String nome = scanner.nextLine();
@@ -83,13 +81,19 @@ public class Sistema {
                             isRegistered = true;
                             System.out.println("Usuário Encontrado!");
                         }
+
                     }
-                    System.out.println("Usuário não Encontrado!");
+                    if(!isRegistered){
+                        System.out.println("Usuário não Encontrado! Tente novamente.");
+                    }
+
                 }
 
                 System.out.println("Digite o valor transferido:");
                 double valortransferido = Double.parseDouble(scanner.nextLine());
                 Transacoes.transferirDinheiro(destino, this.conta, valortransferido);
+                break;
+
 
             default:
                 System.out.println("Funcionalidade ainda não implementada");
