@@ -68,6 +68,11 @@ public class Sistema {
                 break;
 
             case 4:
+                System.out.println("Digite o valor que deseja trasnferir: ");
+                String QRcode = this.conta.transformarQRcode(Double.parseDouble(scanner.nextLine()));
+                System.out.println(QRcode);
+                break;
+            case 5:
                 boolean isRegistered = false;
                 Contas destino = null;
 
@@ -89,9 +94,9 @@ public class Sistema {
 
                 }
 
-                System.out.println("Digite o valor transferido:");
-                double valortransferido = Double.parseDouble(scanner.nextLine());
-                Transacoes.transferirDinheiro(destino, this.conta, valortransferido);
+                System.out.println("Cole o QRcode gerado:");
+                String QRcodeString = scanner.nextLine();
+                Transacoes.transferirDinheiro(destino, this.conta, QRcodeString);
                 break;
 
 
@@ -106,7 +111,8 @@ public class Sistema {
         System.out.println("1 - Visualizar Saldo");
         System.out.println("2 - Depositar dinheiro");
         System.out.println("3 - Sacar dinheiro");
-        System.out.println("4 - Transferir dinheiro");
+        System.out.println("4 - Gerar QRcode (Necessário para transferir dinheiro)");
+        System.out.println("5 - Transferir dinheiro");
         System.out.println("0 - Sair do sistema");
 
     }

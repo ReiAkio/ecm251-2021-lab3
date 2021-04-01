@@ -39,6 +39,10 @@ public class Contas {
 
     }
 
+    public String transformarQRcode(double valorDesejado){
+        return idConta +";"+ usuario.nome + ";" + valorDesejado +";" + Transacoes.getRandomNumberInRange(1000, 9999);
+    }
+
     @Override
     public String toString() {
         return "Contas{" +
