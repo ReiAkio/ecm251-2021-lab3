@@ -10,7 +10,7 @@ public class Usuarios {
     public String email;
     public Contas conta;
 
-    public Usuarios(String nome, String senha, String email,double saldo, int idConta) {
+    public Usuarios(String nome, String senha, String email,double saldo, int idConta) {     //Construtor Usuarios com os atributos: nome, senha, email e conta
         this.nome = nome;
         this.senha = senha;
         this.email = email;

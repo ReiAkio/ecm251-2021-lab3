@@ -10,13 +10,13 @@ public class Sistema {
     private static Scanner scanner = new Scanner(System.in);
 
 
-    public void start(){
-        new Usuarios("Joao", "Joao123", "Joao@",200,111);
-        new Usuarios("Guilherme", "Guilherme123", "Guilherme@", 300,222);
-        new Usuarios("Maria", "Maria123", "Maria@",500,333);
+    public void start(){       // Cria 3 usuários
+        new Usuarios("Joao", "Joao123", "Joao@",1000,111);
+        new Usuarios("Guilherme", "Guilherme123", "Guilherme@", 250,222);
+        new Usuarios("Maria", "Maria123", "Maria@",3000,333);
         logarUsuario();
     }
-    public void logarUsuario() {
+    public void logarUsuario() {   // Checa se o nome digitado e sua senha fazem parte de algum usuario ja cadastrado
         System.out.println("Qual o seu nome?");
         String nome = scanner.nextLine();
         System.out.println("Qual a sua senha?");
@@ -38,7 +38,7 @@ public class Sistema {
 
 
 
-    public void executar(){
+    public void executar(){     // Executa o Menu
         this.continuarExecucao = true;
         while(continuarExecucao) {
             exibirMenu();

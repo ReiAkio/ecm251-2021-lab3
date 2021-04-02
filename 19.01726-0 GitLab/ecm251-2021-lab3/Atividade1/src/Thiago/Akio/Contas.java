@@ -6,17 +6,17 @@ public class Contas {
     private Usuarios usuario;
 
 
-    public Contas(int idConta, double saldo, Usuarios usuario) {
+    public Contas(int idConta, double saldo, Usuarios usuario) {   // Construtor Contas, com os atributos: idConta, saldo e usuario
         this.idConta = idConta;
         this.saldo = saldo;
         this.usuario = usuario;
     }
 
-    public double getSaldo() {
+    public double getSaldo() {     //retorna o saldo da conta
         return saldo;
     }
 
-    public void tirarSaldo(double saldo){
+    public void tirarSaldo(double saldo){   // retira o valor saldo da conta
         this.saldo -= saldo;
     }
 
@@ -24,7 +24,7 @@ public class Contas {
         return idConta;
     }
 
-    public boolean sacar(double valor){
+    public boolean sacar(double valor){   //Retira um valor do saldo da conta
 
         if(valor <= this.saldo){
             tirarSaldo(valor);
@@ -33,13 +33,13 @@ public class Contas {
         return false;
     }
 
-    public void depositar(double valor){
+    public void depositar(double valor){  // Deposita um valor no saldo da conta
 
         this.saldo += valor;
 
     }
 
-    public String transformarQRcode(double valorDesejado){
+    public String transformarQRcode(double valorDesejado){     // transforma os valores necessários para uma transferencia em uma String QRcode
         return idConta +";"+ usuario.nome + ";" + valorDesejado +";" + Transacoes.getRandomNumberInRange(1000, 9999);
     }
 
