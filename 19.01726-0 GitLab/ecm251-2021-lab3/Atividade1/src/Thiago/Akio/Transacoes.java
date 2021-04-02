@@ -4,7 +4,7 @@ import java.util.Random;
 
 public  class Transacoes {
 
-    public static int getRandomNumberInRange(int min, int max) {
+    public static int getRandomNumberInRange(int min, int max) { // Gera um numero aleaório entra os valores minimos e maximos digitados
 
         Random r = new Random();
         return r.nextInt((max - min) + 1) + min;
@@ -12,7 +12,7 @@ public  class Transacoes {
 
 
 
-    public static boolean transferirDinheiro (Contas destino ,Contas origem, String QRcode){
+    public static boolean transferirDinheiro (Contas destino ,Contas origem, String QRcode){ // função responsavel por transferir dinheiro de uma conta origem para uma conta destino
 
 
         String[] dados = QRcode.split(";");

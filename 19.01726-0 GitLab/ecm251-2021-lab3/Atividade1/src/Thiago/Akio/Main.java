@@ -8,7 +8,7 @@ public class Main {
 
     //private Usuarios usuario;
     public static void main(String[] args) {
-        Sistema sistema = new Sistema();
-        sistema.start();
+        Sistema sistema = new Sistema();   // Cria um objeto sistema na classe Main
+        sistema.start();                   // inicia o metodo da classe sistema "start"
     }
 }
