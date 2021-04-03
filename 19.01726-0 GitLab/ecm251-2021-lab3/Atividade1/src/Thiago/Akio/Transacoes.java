@@ -12,7 +12,7 @@ public  class Transacoes {
 
 
 
-    public static boolean transferirDinheiro (Contas destino ,Contas origem, String QRcode){ // função responsavel por transferir dinheiro de uma conta origem para uma conta destino
+    public static boolean transferirDinheiro (Contas destino ,Contas origem, String QRcode){ // função responsavel por transferir dinheiro de uma conta origem para uma conta destino a partir de um QRcode gerado pelo metodo transformarQRcode
 
 
         String[] dados = QRcode.split(";");

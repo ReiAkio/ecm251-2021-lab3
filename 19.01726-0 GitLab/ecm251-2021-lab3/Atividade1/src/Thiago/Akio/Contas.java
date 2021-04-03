@@ -12,19 +12,19 @@ public class Contas {
         this.usuario = usuario;
     }
 
-    public double getSaldo() {     //retorna o saldo da conta
+    public double getSaldo() {     // Retorna o saldo da conta
         return saldo;
     }
 
-    public void tirarSaldo(double saldo){   // retira o valor saldo da conta
+    public void tirarSaldo(double saldo){   // Retira o valor saldo da conta
         this.saldo -= saldo;
     }
 
-    public int getIdConta() {
+    public int getIdConta() {  // Retorna o idConta da Conta
         return idConta;
     }
 
-    public boolean sacar(double valor){   //Retira um valor do saldo da conta
+    public boolean sacar(double valor){   //Retira um valor do saldo da conta apenas se o valor do saldo da conta for maior ou igual ao valor que o usuario deseja retirar
 
         if(valor <= this.saldo){
             tirarSaldo(valor);
